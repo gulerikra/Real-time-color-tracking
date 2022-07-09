@@ -1,6 +1,7 @@
 # Real-time-color-tracking
 
 Kamera yardımıyla gerçek zamanlı mavi ve kırmızı renk takibi.
+![rebks](https://user-images.githubusercontent.com/62421679/178112405-8ccbd7af-94fd-4ce5-bf60-177d837ebcb0.PNG)
 
 
 
