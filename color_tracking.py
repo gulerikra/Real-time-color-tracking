@@ -10,9 +10,9 @@ import sqlite3 #sqlite kütüphnesi
 con = sqlite3.connect("renkler.db") # bağlantı kurma 
 cursor = con.cursor() # cursor tanımlama
 
-def tablo_olustur(): #sql içi tablo oluşturma fonksiyonu
+def tablo_olustur(): #sql için tablo oluşturma fonksiyonu
     cursor.execute("CREATE TABLE IF NOT EXISTS boyut (en FLOAT, boy FLOAT)")  # tablo oluşturma sorgusu
-    con.commit() #execute sorgusunun çalışması için
+    con.commit() #execute sorgusunun çalışması
 tablo_olustur()
 
 cap = cv2.VideoCapture(0)
@@ -32,7 +32,7 @@ while True:
     red = cv2.inRange(hsv, red_lower, red_upper)
     blue = cv2.inRange(hsv, blue_lower, blue_upper)
 
-    # Morfoloji işlemler, Dilation
+    # Morfolojik işlemler, Dilation
     kernal = np.ones((5, 5), "uint8")
     
     red = cv2.dilate(red, kernal)
